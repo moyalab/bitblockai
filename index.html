@@ -16,5 +16,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.5/dist/teachablemachine-image.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8.6/dist/teachablemachine-pose.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.20.0/dist/face-api.min.js" crossorigin="anonymous"></script>
+    <script type="module">
+      import * as mpTasks from 'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.34/vision_bundle.mjs';
+      window.mpTasks = mpTasks;
+      window.dispatchEvent(new Event('mpTasks:ready'));
+    </script>
   <script type="text/javascript" src="lib.min.js"></script><script type="text/javascript" src="chunks/gui.js"></script></body>
 </html>
