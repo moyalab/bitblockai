@@ -1,1 +1,1407 @@
-!function(t){var e={};function n(r){if(e[r])return e[r].exports;var i=e[r]={i:r,l:!1,exports:{}};return t[r].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=t,n.c=e,n.d=function(t,e,r){n.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:r})},n.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},n.t=function(t,e){if(1&e&&(t=n(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var i in t)n.d(r,i,function(e){return t[e]}.bind(null,i));return r},n.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return n.d(e,"a",e),e},n.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},n.p="",n(n.s=4)}([function(t,e,n){function r(){}n(12).mixin(r),r.prototype.write=function(t,e,n){this.emit("item",t,e,n)},r.prototype.end=function(){this.emit("end"),this.removeAllListeners()},r.prototype.pipe=function(t){var e=this;function n(){t.write.apply(t,Array.prototype.slice.call(arguments))}function r(){!t._isStdio&&t.end()}return e.emit("unpipe",t),t.emit("pipe",e),e.on("item",n),e.on("end",r),e.when("unpipe",function(i){var o=i===t||void 0===i;return o&&(e.removeListener("item",n),e.removeListener("end",r),t.emit("unpipe")),o}),t},r.prototype.unpipe=function(t){return this.emit("unpipe",t),this},r.prototype.format=function(t){throw new Error(["Warning: .format() is deprecated in Minilog v2! Use .pipe() instead. For example:","var Minilog = require('minilog');","Minilog","  .pipe(Minilog.backends.console.formatClean)","  .pipe(Minilog.backends.console);"].join("\n"))},r.mixin=function(t){var e,n=r.prototype;for(e in n)n.hasOwnProperty(e)&&(t.prototype[e]=n[e])},t.exports=r},function(t,e){t.exports=function(t){return t.webpackPolyfill||(t.deprecate=function(){},t.paths=[],t.children||(t.children=[]),Object.defineProperty(t,"loaded",{enumerable:!0,get:function(){return t.l}}),Object.defineProperty(t,"id",{enumerable:!0,get:function(){return t.i}}),t.webpackPolyfill=1),t}},function(t,e,n){function r(t,e){var n=o();return(r=function(t,e){return n[t-=217]})(t,e)}var i=r;function o(){var t=["(((.+)+)+)+$","2LjuDpL","2089320ifrnMW","1695ZFJzVM","enable","3412lVIknW","118314KUTPgd","apply","toString","72mlDopI","402317OEqlLl","5040952ZpGGvu","7797258kxVivd","3668157dGAfNS"];return(o=function(){return t})()}!function(t,e){for(var n=r,i=o();;)try{if(867218===parseInt(n(227))/1*(-parseInt(n(218))/2)+parseInt(n(230))/3+-parseInt(n(222))/4*(-parseInt(n(220))/5)+-parseInt(n(226))/6*(-parseInt(n(223))/7)+parseInt(n(228))/8+-parseInt(n(229))/9+-parseInt(n(219))/10)break;i.push(i.shift())}catch(t){i.push(i.shift())}}();var a=function(){var t=!0;return function(e,n){var i=t?function(){if(n){var t=n[r(224)](e,arguments);return n=null,t}}:function(){};return t=!1,i}}()(this,function(){var t=r;return a[t(225)]().search(t(217))[t(225)]().constructor(a).search(t(217))});a();var u=n(10);u[i(221)](),t.exports=u("vm")},function(t,e){var n={black:"#000",red:"#c23621",green:"#25bc26",yellow:"#bbbb00",blue:"#492ee1",magenta:"#d338d3",cyan:"#33bbc8",gray:"#808080",purple:"#708"};t.exports=function(t,e){return e?"color: #fff; background: "+n[t]+";":"color: "+n[t]+";"}},function(t,e,n){(function(t){function e(t){"@babel/helpers - typeof";return(e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function r(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){var n=null==t?null:"undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null!=n){var r,i,o,a,u=[],c=!0,s=!1;try{if(o=(n=n.call(t)).next,0===e){if(Object(n)!==n)return;c=!1}else for(;!(c=(r=o.call(n)).done)&&(u.push(r.value),u.length!==e);c=!0);}catch(t){s=!0,i=t}finally{try{if(!c&&null!=n.return&&(a=n.return(),Object(a)!==a))return}finally{if(s)throw i}}return u}}(t,e)||function(t,e){if(t){if("string"==typeof t)return i(t,e);var n={}.toString.call(t).slice(8,-1);return"Object"===n&&t.constructor&&(n=t.constructor.name),"Map"===n||"Set"===n?Array.from(t):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?i(t,e):void 0}}(t,e)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function i(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=Array(e);n<e;n++)r[n]=t[n];return r}function o(t,e){for(var n=0;n<e.length;n++){var r=e[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(t,a(r.key),r)}}function a(t){var n=function(t,n){if("object"!=e(t)||!t)return t;var r=t[Symbol.toPrimitive];if(void 0!==r){var i=r.call(t,n||"default");if("object"!=e(i))return i;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===n?String:Number)(t)}(t,"string");return"symbol"==e(n)?n:n+""}var u=n(6),c=n(7),s=n(8),f=n(20),l=function(){return function(t,e,n){return e&&o(t.prototype,e),n&&o(t,n),Object.defineProperty(t,"prototype",{writable:!1}),t}(function t(){var e=this;!function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,t),this.nextExtensionId=0,this.initialRegistrations=[],s.waitForConnection.then(function(){s.call("extensions","allocateWorker").then(function(t){var n=r(t,2),i=n[0],o=n[1];e.workerId=i,e.extensionURL=o;try{importScripts(o);var a=e.initialRegistrations;e.initialRegistrations=null,Promise.all(a).then(function(){return s.call("extensions","onWorkerInit",i)})}catch(t){s.call("extensions","onWorkerInit",i,t)}})}),this.extensions=[]},[{key:"register",value:function(t){var e=this,n=this.nextExtensionId++;this.extensions.push(t);var r="extension.".concat(this.workerId,".").concat(n),i=s.setService(r,t).then(function(){return s.call("extensions","registerExtensionService",r,e.extensionURL)});return this.initialRegistrations&&this.initialRegistrations.push(i),i}}])}();t.Scratch=t.Scratch||{},t.Scratch.ArgumentType=u,t.Scratch.BlockType=c,t.Scratch.TargetType=f;var p=new l;t.Scratch.extensions={register:p.register.bind(p)}}).call(this,n(5))},function(t,e){var n;n=function(){return this}();try{n=n||new Function("return this")()}catch(t){"object"==typeof window&&(n=window)}t.exports=n},function(t,e,n){(function(t){function e(t,n){var r=o();return(e=function(t,e){return r[t-=380]})(t,n)}var n=e;!function(t,n){for(var r=e,i=o();;)try{if(833151===-parseInt(r(383))/1*(parseInt(r(388))/2)+-parseInt(r(401))/3+parseInt(r(402))/4*(-parseInt(r(380))/5)+parseInt(r(403))/6+parseInt(r(382))/7*(parseInt(r(391))/8)+parseInt(r(393))/9*(-parseInt(r(389))/10)+parseInt(r(398))/11)break;i.push(i.shift())}catch(t){i.push(i.shift())}}();var r=function(){var t=!0;return function(e,n){var r=t?function(){if(n){var t=n.apply(e,arguments);return n=null,t}}:function(){};return t=!1,r}}()(this,function(){var t=e;return r[t(394)]().search(t(390)).toString().constructor(r)[t(385)](t(390))});r();var i={ANGLE:n(392),BOOLEAN:n(397),COLOR:n(387),COLOR8:n(381),NUMBER:n(384),STRING:n(386),MATRIX:n(400),MATRIX8:"matrix8",NOTE:n(395),IMAGE:n(396)};function o(){var t=["76NNyIgI","number","search","string","color","19196bvhVAC","986210tCjcHO","(((.+)+)+)+$","5733720vAROvX","angle","36DXRsrw","toString","note","image","Boolean","7201139ILmbcE","exports","matrix","658977lYDFNs","1508kdcTWk","3357216msWcqM","6245SKyIEX","color8","14KicQMT"];return(o=function(){return t})()}t[n(399)]=i}).call(this,n(1)(t))},function(t,e,n){(function(t){function e(){var t=["exports","hat","865791aHLMCy","17188kddFcg","3423400HKhKgM","6dywoRD","3622318WjZxJd","(((.+)+)+)+$","button","Boolean","70bxWXII","event","62734endWGV","429ySNyhy","394016qckreh","740475FufRsx","reporter","search"];return(e=function(){return t})()}function n(t,r){var i=e();return(n=function(t,e){return i[t-=469]})(t,r)}var r=n;!function(t,r){for(var i=n,o=e();;)try{if(375733===-parseInt(i(469))/1+parseInt(i(485))/2+parseInt(i(486))/3*(parseInt(i(476))/4)+-parseInt(i(470))/5+parseInt(i(478))/6*(parseInt(i(479))/7)+parseInt(i(477))/8+parseInt(i(475))/9*(-parseInt(i(483))/10))break;o.push(o.shift())}catch(t){o.push(o.shift())}}();var i=function(){var t=!0;return function(e,n){var r=t?function(){if(n){var t=n.apply(e,arguments);return n=null,t}}:function(){};return t=!1,r}}()(this,function(){var t=n;return i.toString()[t(472)](t(480)).toString().constructor(i).search("(((.+)+)+)+$")});i();var o={BOOLEAN:r(482),BUTTON:r(481),COMMAND:"command",CONDITIONAL:"conditional",EVENT:r(484),HAT:r(474),LOOP:"loop",REPORTER:r(471)};t[r(473)]=o}).call(this,n(1)(t))},function(t,e,n){(function(t){var e=h;function r(t){"@babel/helpers - typeof";var e=h;return(r="function"==typeof Symbol&&e(325)==typeof Symbol[e(312)]?function(t){return typeof t}:function(t){var n=e;return t&&n(315)==typeof Symbol&&t[n(304)]===Symbol&&t!==Symbol.prototype?n(325):typeof t})(t)}function i(t,e){for(var n=h,r=0;r<e[n(309)];r++){var i=e[r];i[n(303)]=i[n(303)]||!1,i[n(319)]=!0,n(283)in i&&(i.writable=!0),Object[n(294)](t,o(i.key),i)}}function o(t){var e=h,n=function(t,e){var n=h;if(n(278)!=r(t)||!t)return t;var i=t[Symbol[n(290)]];if(void 0!==i){var o=i[n(277)](t,e||n(299));if(n(278)!=r(o))return o;throw new TypeError(n(281))}return(n(313)===e?String:Number)(t)}(t,e(313));return e(325)==r(n)?n:n+""}function a(){var t=["resolve","dispatch","hasOwnProperty","default","9480573WxFwaJ","144212LWgfMN","prototype","enumerable","constructor","concat","bind","(((.+)+)+)+$","apply","length","setService","getPrototypeOf","iterator","string","handshake","function","Worker dispatch replacing existing service provider for ","then","error","configurable","close","onmessage","_connectionPromise","exports","valueOf","symbol","method","_remoteCall","536477ibkLGG","terminate","_onConnect","4CSVDej","120378mXyBqa","create","toString","this hasn't been initialised - super() hasn't been called","construct","33347083puiUSp","call","object","Derived constructors may only return object or undefined","Worker dispatch received message for unknown method: ","@@toPrimitive must return a primitive value.","search","value","services","setPrototypeOf","_getServiceProvider","18CvKiGB","1867310kxeODE","38872CSTVww","toPrimitive","waitForConnection","90Buvcct","987ZBrQJu","defineProperty","_onMessage"];return(a=function(){return t})()}function u(t,e,n){var i=h;return e=c(e),function(t,e){var n=h;if(e&&(n(278)==r(e)||n(315)==typeof e))return e;if(void 0!==e)throw new TypeError(n(279));return function(t){if(void 0===t)throw new ReferenceError(h(274));return t}(t)}(t,function(){var t=h;try{var e=!Boolean.prototype[t(324)][t(277)](Reflect[t(275)](Boolean,[],function(){}))}catch(t){}return function(){return!!e}()}()?Reflect[i(275)](e,n||[],c(t)[i(304)]):e.apply(t,n))}function c(t){var e=h;return(c=Object[e(285)]?Object[e(311)].bind():function(t){var n=e;return t.__proto__||Object[n(311)](t)})(t)}function s(t,e){var n=h;return(s=Object[n(285)]?Object[n(285)].bind():function(t,e){return t.__proto__=e,t})(t,e)}!function(t,e){for(var n=h,r=a();;)try{if(544100===-parseInt(n(328))/1*(-parseInt(n(331))/2)+-parseInt(n(287))/3*(-parseInt(n(301))/4)+parseInt(n(292))/5*(parseInt(n(332))/6)+parseInt(n(293))/7*(parseInt(n(289))/8)+parseInt(n(300))/9+parseInt(n(288))/10+-parseInt(n(276))/11)break;r.push(r.shift())}catch(t){r.push(r.shift())}}();var f=n(9),l=n(2),p=function(t){var e=h,n=function(){var t=!0;return function(e,n){var r=t?function(){if(n){var t=n[h(308)](e,arguments);return n=null,t}}:function(){};return t=!1,r}}()(this,function(){var t=h;return n[t(273)]().search("(((.+)+)+)+$")[t(273)]()[t(304)](n)[t(282)](t(307))});function r(){var t,e=h;return function(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}(this,r),(t=u(this,r))._connectionPromise=new Promise(function(e){t[h(330)]=e}),t[e(284)]={},t[e(295)]=t[e(295)][e(306)](t,self),"undefined"!=typeof self&&(self[e(321)]=t._onMessage),t}return n(),function(t,e){var n=h;if(n(315)!=typeof e&&null!==e)throw new TypeError("Super expression must either be null or a function");t[n(302)]=Object[n(333)](e&&e[n(302)],{constructor:{value:t,writable:!0,configurable:!0}}),Object.defineProperty(t,"prototype",{writable:!1}),e&&s(t,e)}(r,t),function(t,e,n){var r=h;return e&&i(t[r(302)],e),n&&i(t,n),Object[r(294)](t,r(302),{writable:!1}),t}(r,[{key:"waitForConnection",get:function(){return this[h(322)]}},{key:e(310),value:function(t,n){var r=e,i=this;return this[r(284)][r(298)](t)&&l.warn(r(316)[r(305)](t)),this[r(284)][t]=n,this[r(291)][r(317)](function(){var e=r;return i[e(327)](self,e(297),e(310),t)})}},{key:e(286),value:function(t){var n=this[e(284)][t];return{provider:n||self,isRemote:!n}}},{key:"_onDispatchMessage",value:function(t,n){var r,i=e;switch(n.method){case i(314):r=this[i(330)]();break;case i(329):setTimeout(function(){return self[i(320)]()},0),r=Promise[i(296)]();break;default:l[i(318)](i(280)[i(305)](n[i(326)]))}return r}}])}(f);function h(t,e){var n=a();return(h=function(t,e){return n[t-=273]})(t,e)}t[e(323)]=new p}).call(this,n(1)(t))},function(t,e,n){(function(t){var e=i;function r(t){"@babel/helpers - typeof";var e=i;return(r=e(218)==typeof Symbol&&e(259)==typeof Symbol[e(274)]?function(t){return typeof t}:function(t){var n=e;return t&&n(218)==typeof Symbol&&t[n(251)]===Symbol&&t!==Symbol.prototype?n(259):typeof t})(t)}function i(t,e){var n=u();return(i=function(t,e){return n[t-=195]})(t,e)}function o(t){return function(t){if(Array[i(248)](t))return s(t)}(t)||function(t){var e=i;if(e(271)!=typeof Symbol&&null!=t[Symbol[e(274)]]||null!=t[e(260)])return Array[e(276)](t)}(t)||c(t)||function(){throw new TypeError(i(215))}()}function a(t,e){return function(t){if(Array.isArray(t))return t}(t)||function(t,e){var n=i,r=null==t?null:n(271)!=typeof Symbol&&t[Symbol[n(274)]]||t[n(260)];if(null!=r){var o,a,u,c,s=[],f=!0,l=!1;try{if(u=(r=r[n(216)](t))[n(240)],0===e){if(Object(r)!==r)return;f=!1}else for(;!(f=(o=u[n(216)](r))[n(232)])&&(s[n(246)](o[n(209)]),s[n(231)]!==e);f=!0);}catch(t){l=!0,a=t}finally{try{if(!f&&null!=r[n(237)]&&(c=r[n(237)](),Object(c)!==c))return}finally{if(l)throw a}}return s}}(t,e)||c(t,e)||function(){throw new TypeError(i(244))}()}function u(){var t=["enumerable","callbacks","postMessage","args","responseId","9344184iGFabz","length","done","search","resolve","2192550jttfkq","209544APEgoA","return","provider","_deliverResponse","next","_remoteTransferCall","159735nuabve","dispatch","Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.","configurable","push","toString","isArray","54IzgUvt","pop","constructor","20TuJUiJ","transferCall","@@toPrimitive must return a primitive value.","300580XxuFki","Cannot call a class as a function"," method","string","symbol","@@iterator","isRemote","_storeCallbacks","defineProperty","error","test","key","apply","42pExbZE","Dispatch message missing required response ID: ","Object","undefined","Unimplemented dispatch message handler cannot handle ","name","iterator","Arguments","from","method","_remoteCall","concat","7794mNqvTq","3688tmnjRi","nextResponseId","reject","default","(((.+)+)+)+$","toPrimitive","Map","_onMessage","22XLtfPN","11699FAYDgE","Set","value","Dispatch callback failed: ","stringify","service",": _getServiceProvider not implemented","prototype","Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.","call","Service not found: ","function","Could not get provider for ","Dispatch caught malformed message from a worker: ","object","exports","_getServiceProvider","slice"];return(u=function(){return t})()}function c(t,e){var n=i;if(t){if("string"==typeof t)return s(t,e);var r={}[n(247)][n(216)](t)[n(224)](8,-1);return n(270)===r&&t[n(251)]&&(r=t.constructor[n(273)]),n(204)===r||n(208)===r?Array[n(276)](t):n(275)===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/[n(265)](r)?s(t,e):void 0}}function s(t,e){(null==e||e>t[i(231)])&&(e=t.length);for(var n=0,r=Array(e);n<e;n++)r[n]=t[n];return r}function f(t,e){for(var n=i,r=0;r<e[n(231)];r++){var o=e[r];o[n(225)]=o[n(225)]||!1,o[n(245)]=!0,n(209)in o&&(o.writable=!0),Object[n(263)](t,l(o[n(266)]),o)}}function l(t){var e=i,n=function(t,e){var n=i;if("object"!=r(t)||!t)return t;var o=t[Symbol[n(203)]];if(void 0!==o){var a=o[n(216)](t,e||n(201));if(n(221)!=r(a))return a;throw new TypeError(n(254))}return(n(258)===e?String:Number)(t)}(t,"string");return e(259)==r(n)?n:n+""}!function(t,e){for(var n=i,r=u();;)try{if(358990===-parseInt(n(207))/1*(parseInt(n(249))/2)+-parseInt(n(236))/3*(-parseInt(n(252))/4)+-parseInt(n(242))/5*(-parseInt(n(268))/6)+parseInt(n(255))/7+-parseInt(n(198))/8*(-parseInt(n(197))/9)+parseInt(n(235))/10*(parseInt(n(206))/11)+-parseInt(n(230))/12)break;r.push(r.shift())}catch(t){r.push(r.shift())}}();var p=n(2),h=function(){var t=i,e=function(){var t=!0;return function(e,n){var r=t?function(){if(n){var t=n[i(267)](e,arguments);return n=null,t}}:function(){};return t=!1,r}}()(this,function(){var t=i;return e[t(247)]()[t(233)]("(((.+)+)+)+$")[t(247)]().constructor(e)[t(233)](t(202))});return e(),function(t,e,n){var r=i;return e&&f(t.prototype,e),n&&f(t,n),Object.defineProperty(t,r(214),{writable:!1}),t}(function t(){var e=i;(function(t,e){if(!(t instanceof e))throw new TypeError(i(256))})(this,t),this[e(226)]=[],this[e(199)]=0},[{key:t(216),value:function(e,n){for(var r=t,i=arguments[r(231)],o=new Array(i>2?i-2:0),a=2;a<i;a++)o[a-2]=arguments[a];return this[r(253)][r(267)](this,[e,n,null][r(196)](o))}},{key:"transferCall",value:function(e,n,r){var i=t;try{var o=this[i(223)](e),a=o[i(238)],u=o[i(261)];if(a){for(var c=arguments.length,s=new Array(c>3?c-3:0),f=3;f<c;f++)s[f-3]=arguments[f];if(u)return this._remoteTransferCall[i(267)](this,[a,e,n,r].concat(s));var l=a[n][i(267)](a,s);return Promise[i(234)](l)}return Promise[i(200)](new Error(i(217)[i(196)](e)))}catch(t){return Promise[i(200)](t)}}},{key:"_isRemoteService",value:function(e){var n=t;return this._getServiceProvider(e)[n(261)]}},{key:t(195),value:function(e,n,r){for(var i=t,o=arguments[i(231)],a=new Array(o>3?o-3:0),u=3;u<o;u++)a[u-3]=arguments[u];return this[i(241)][i(267)](this,[e,n,r,null][i(196)](a))}},{key:t(241),value:function(e,n,r,i){for(var o=t,a=this,u=arguments[o(231)],c=new Array(u>4?u-4:0),s=4;s<u;s++)c[s-4]=arguments[s];return new Promise(function(t,u){var s=o,f=a[s(262)](t,u);c[s(231)]>0&&"function"==typeof c[c[s(231)]-1].yield&&c[s(250)](),i?e[s(227)]({service:n,method:r,responseId:f,args:c},i):e.postMessage({service:n,method:r,responseId:f,args:c})})}},{key:t(262),value:function(e,n){var r=t,i=this.nextResponseId++;return this[r(226)][i]=[e,n],i}},{key:t(239),value:function(e,n){var r=t;try{var i=a(this[r(226)][e],2),o=i[0],u=i[1];delete this.callbacks[e],n.error?u(n[r(264)]):o(n.result)}catch(t){p[r(264)](r(210)[r(196)](JSON[r(211)](t)))}}},{key:t(205),value:function(e,n){var r,i=t,a=n.data;a[i(228)]=a.args||[],a[i(212)]?r=a[i(212)]===i(243)?this._onDispatchMessage(e,a):this[i(216)].apply(this,[a[i(212)],a[i(277)]].concat(o(a.args))):void 0===a[i(229)]?p.error(i(220)[i(196)](JSON[i(211)](n))):this[i(239)](a.responseId,a),r&&(void 0===a[i(229)]?p[i(264)](i(269)[i(196)](JSON.stringify(n))):r.then(function(t){var n=i;return e[n(227)]({responseId:a[n(229)],result:t})},function(t){var n=i;return e[n(227)]({responseId:a[n(229)],error:t})}))}},{key:t(223),value:function(e){var n=t;throw new Error(n(219)[n(196)](e,n(213)))}},{key:"_onDispatchMessage",value:function(e,n){var r=t;throw new Error(r(272)[r(196)](n[r(277)],r(257)))}}])}();t[e(222)]=h}).call(this,n(1)(t))},function(t,e,n){var r=n(11),i=r.enable,o=r.disable,a="undefined"!=typeof navigator&&/chrome/i.test(navigator.userAgent),u=n(14);if(r.defaultBackend=a?u.minilog:u,"undefined"!=typeof window){try{r.enable(JSON.parse(window.localStorage.minilogSettings))}catch(t){}if(window.location&&window.location.search){var c=RegExp("[?&]minilog=([^&]*)").exec(window.location.search);c&&r.enable(decodeURIComponent(c[1]))}}r.enable=function(){i.call(r,!0);try{window.localStorage.minilogSettings=JSON.stringify(!0)}catch(t){}return this},r.disable=function(){o.call(r);try{delete window.localStorage.minilogSettings}catch(t){}return this},(t.exports=r).backends={array:n(17),browser:r.defaultBackend,localStorage:n(18),jQuery:n(19)}},function(t,e,n){var r=n(0),i=n(13),o=new r,a=Array.prototype.slice;(e=t.exports=function(t){var n=function(){return o.write(t,void 0,a.call(arguments)),n};return n.debug=function(){return o.write(t,"debug",a.call(arguments)),n},n.info=function(){return o.write(t,"info",a.call(arguments)),n},n.warn=function(){return o.write(t,"warn",a.call(arguments)),n},n.error=function(){return o.write(t,"error",a.call(arguments)),n},n.log=n.debug,n.suggest=e.suggest,n.format=o.format,n}).defaultBackend=e.defaultFormatter=null,e.pipe=function(t){return o.pipe(t)},e.end=e.unpipe=e.disable=function(t){return o.unpipe(t)},e.Transform=r,e.Filter=i,e.suggest=new i,e.enable=function(){return e.defaultFormatter?o.pipe(e.suggest).pipe(e.defaultFormatter).pipe(e.defaultBackend):o.pipe(e.suggest).pipe(e.defaultBackend)}},function(t,e){function n(){this._events={}}n.prototype={on:function(t,e){this._events||(this._events={});var n=this._events;return(n[t]||(n[t]=[])).push(e),this},removeListener:function(t,e){var n,r=this._events[t]||[];for(n=r.length-1;n>=0&&r[n];n--)r[n]!==e&&r[n].cb!==e||r.splice(n,1)},removeAllListeners:function(t){t?this._events[t]&&(this._events[t]=[]):this._events={}},listeners:function(t){return this._events&&this._events[t]||[]},emit:function(t){this._events||(this._events={});var e,n=Array.prototype.slice.call(arguments,1),r=this._events[t]||[];for(e=r.length-1;e>=0&&r[e];e--)r[e].apply(this,n);return this},when:function(t,e){return this.once(t,e,!0)},once:function(t,e,n){if(!e)return this;function r(){n||this.removeListener(t,r),e.apply(this,arguments)&&n&&this.removeListener(t,r)}return r.cb=e,this.on(t,r),this}},n.mixin=function(t){var e,r=n.prototype;for(e in r)r.hasOwnProperty(e)&&(t.prototype[e]=r[e])},t.exports=n},function(t,e,n){var r={debug:1,info:2,warn:3,error:4};function i(){this.enabled=!0,this.defaultResult=!0,this.clear()}function o(t,e){return t.n.test?t.n.test(e):t.n==e}n(0).mixin(i),i.prototype.allow=function(t,e){return this._white.push({n:t,l:r[e]}),this},i.prototype.deny=function(t,e){return this._black.push({n:t,l:r[e]}),this},i.prototype.clear=function(){return this._white=[],this._black=[],this},i.prototype.test=function(t,e){var n,i=Math.max(this._white.length,this._black.length);for(n=0;n<i;n++){if(this._white[n]&&o(this._white[n],t)&&r[e]>=this._white[n].l)return!0;if(this._black[n]&&o(this._black[n],t)&&r[e]<=this._black[n].l)return!1}return this.defaultResult},i.prototype.write=function(t,e,n){if(!this.enabled||this.test(t,e))return this.emit("item",t,e,n)},t.exports=i},function(t,e,n){var r=/\n+$/,i=new(n(0));i.write=function(t,e,n){var i=n.length-1;if("undefined"!=typeof console&&console.log){if(console.log.apply)return console.log.apply(console,[t,e].concat(n));if(JSON&&JSON.stringify){n[i]&&"string"==typeof n[i]&&(n[i]=n[i].replace(r,""));try{for(i=0;i<n.length;i++)n[i]=JSON.stringify(n[i])}catch(t){}console.log(n.join(" "))}}},i.formatters=["color","minilog"],i.color=n(15),i.minilog=n(16),t.exports=i},function(t,e,n){var r=n(0),i=n(3),o={debug:["cyan"],info:["purple"],warn:["yellow",!0],error:["red",!0]},a=new r;a.write=function(t,e,n){console.log;console[e]&&console[e].apply&&console[e].apply(console,["%c"+t+" %c"+e,i("gray"),i.apply(i,o[e])].concat(n))},a.pipe=function(){},t.exports=a},function(t,e,n){var r=n(0),i=n(3),o={debug:["gray"],info:["purple"],warn:["yellow",!0],error:["red",!0]},a=new r;a.write=function(t,e,n){var r=console.log;"debug"!=e&&console[e]&&(r=console[e]);var a=0;if("info"!=e){for(;a<n.length&&"string"==typeof n[a];a++);r.apply(console,["%c"+t+" "+n.slice(0,a).join(" "),i.apply(i,o[e])].concat(n.slice(a)))}else r.apply(console,["%c"+t,i.apply(i,o[e])].concat(n))},a.pipe=function(){},t.exports=a},function(t,e,n){var r=[],i=new(n(0));i.write=function(t,e,n){r.push([t,e,n])},i.get=function(){return r},i.empty=function(){r=[]},t.exports=i},function(t,e,n){var r=!1,i=new(n(0));i.write=function(t,e,n){if("undefined"!=typeof window&&"undefined"!=typeof JSON&&JSON.stringify&&JSON.parse)try{r||(r=window.localStorage.minilog?JSON.parse(window.localStorage.minilog):[]),r.push([(new Date).toString(),t,e,n]),window.localStorage.minilog=JSON.stringify(r)}catch(t){}},t.exports=i},function(t,e,n){var r=n(0),i=(new Date).valueOf().toString(36);function o(t){this.url=t.url||"",this.cache=[],this.timer=null,this.interval=t.interval||3e4,this.enabled=!0,this.jQuery=window.jQuery,this.extras={}}r.mixin(o),o.prototype.write=function(t,e,n){this.timer||this.init(),this.cache.push([t,e].concat(n))},o.prototype.init=function(){if(this.enabled&&this.jQuery){var t=this;this.timer=setTimeout(function(){var e,n,r=[],o=t.url;if(0==t.cache.length)return t.init();for(e=0;e<t.cache.length;e++)try{JSON.stringify(t.cache[e]),r.push(t.cache[e])}catch(t){}t.jQuery.isEmptyObject(t.extras)?(n=JSON.stringify({logs:r}),o=t.url+"?client_id="+i):n=JSON.stringify(t.jQuery.extend({logs:r},t.extras)),t.jQuery.ajax(o,{type:"POST",cache:!1,processData:!1,data:n,contentType:"application/json",timeout:1e4}).success(function(e,n,r){e.interval&&(t.interval=Math.max(1e3,e.interval))}).error(function(){t.interval=3e4}).always(function(){t.init()}),t.cache=[]},this.interval)}},o.prototype.end=function(){},o.jQueryWait=function(t){if("undefined"!=typeof window&&(window.jQuery||window.$))return t(window.jQuery||window.$);"undefined"!=typeof window&&setTimeout(function(){o.jQueryWait(t)},200)},t.exports=o},function(t,e,n){(function(t){var e=r;!function(t,e){for(var n=r,i=o();;)try{if(521240===parseInt(n(275))/1+-parseInt(n(284))/2+parseInt(n(285))/3+parseInt(n(276))/4+parseInt(n(283))/5*(parseInt(n(286))/6)+parseInt(n(274))/7*(-parseInt(n(287))/8)+parseInt(n(281))/9*(-parseInt(n(277))/10))break;i.push(i.shift())}catch(t){i.push(i.shift())}}();var n=function(){var t=!0;return function(e,n){var r=t?function(){if(n){var t=n.apply(e,arguments);return n=null,t}}:function(){};return t=!1,r}}()(this,function(){var t=r;return n.toString()[t(280)]("(((.+)+)+)+$")[t(278)]()[t(288)](n).search(t(273))});function r(t,e){var n=o();return(r=function(t,e){return n[t-=273]})(t,e)}n();var i={SPRITE:e(279),STAGE:"stage"};function o(){var t=["36bvXpzB","exports","1346135tKaNTC","131150QkfmNL","2696220ctCgSb","12FgCKMy","5976KSsBhx","constructor","(((.+)+)+)+$","8421qzVVZA","554853LhokAg","243972cuDxtj","1418960pjzaYb","toString","sprite","search"];return(o=function(){return t})()}t[e(282)]=i}).call(this,n(1)(t))}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./node_modules/babel-loader/lib/index.js?!./node_modules/scratch-vm/src/extension-support/extension-worker.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/scratch-vm/src/extension-support/extension-worker.js":
+/*!*******************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4!./node_modules/scratch-vm/src/extension-support/extension-worker.js ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+/* eslint-env worker */
+
+var ArgumentType = __webpack_require__(/*! ../extension-support/argument-type */ "./node_modules/scratch-vm/src/extension-support/argument-type.js");
+var BlockType = __webpack_require__(/*! ../extension-support/block-type */ "./node_modules/scratch-vm/src/extension-support/block-type.js");
+var dispatch = __webpack_require__(/*! ../dispatch/worker-dispatch */ "./node_modules/scratch-vm/src/dispatch/worker-dispatch.js");
+var TargetType = __webpack_require__(/*! ../extension-support/target-type */ "./node_modules/scratch-vm/src/extension-support/target-type.js");
+var ExtensionWorker = /*#__PURE__*/function () {
+  function ExtensionWorker() {
+    var _this = this;
+    _classCallCheck(this, ExtensionWorker);
+    this.nextExtensionId = 0;
+    this.initialRegistrations = [];
+    dispatch.waitForConnection.then(function () {
+      dispatch.call('extensions', 'allocateWorker').then(function (x) {
+        var _x = _slicedToArray(x, 2),
+          id = _x[0],
+          extension = _x[1];
+        _this.workerId = id;
+        _this.extensionURL = extension;
+        try {
+          importScripts(extension);
+          var initialRegistrations = _this.initialRegistrations;
+          _this.initialRegistrations = null;
+          Promise.all(initialRegistrations).then(function () {
+            return dispatch.call('extensions', 'onWorkerInit', id);
+          });
+        } catch (e) {
+          dispatch.call('extensions', 'onWorkerInit', id, e);
+        }
+      });
+    });
+    this.extensions = [];
+  }
+  return _createClass(ExtensionWorker, [{
+    key: "register",
+    value: function register(extensionObject) {
+      var _this2 = this;
+      var extensionId = this.nextExtensionId++;
+      this.extensions.push(extensionObject);
+      var serviceName = "extension.".concat(this.workerId, ".").concat(extensionId);
+      var promise = dispatch.setService(serviceName, extensionObject).then(function () {
+        return dispatch.call('extensions', 'registerExtensionService', serviceName, _this2.extensionURL);
+      });
+      if (this.initialRegistrations) {
+        this.initialRegistrations.push(promise);
+      }
+      return promise;
+    }
+  }]);
+}();
+global.Scratch = global.Scratch || {};
+global.Scratch.ArgumentType = ArgumentType;
+global.Scratch.BlockType = BlockType;
+global.Scratch.TargetType = TargetType;
+
+/**
+ * Expose only specific parts of the worker to extensions.
+ */
+var extensionWorker = new ExtensionWorker();
+global.Scratch.extensions = {
+  register: extensionWorker.register.bind(extensionWorker)
+};
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/microee/index.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/microee/index.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function M() { this._events = {}; }
+M.prototype = {
+  on: function(ev, cb) {
+    this._events || (this._events = {});
+    var e = this._events;
+    (e[ev] || (e[ev] = [])).push(cb);
+    return this;
+  },
+  removeListener: function(ev, cb) {
+    var e = this._events[ev] || [], i;
+    for(i = e.length-1; i >= 0 && e[i]; i--){
+      if(e[i] === cb || e[i].cb === cb) { e.splice(i, 1); }
+    }
+  },
+  removeAllListeners: function(ev) {
+    if(!ev) { this._events = {}; }
+    else { this._events[ev] && (this._events[ev] = []); }
+  },
+  listeners: function(ev) {
+    return (this._events ? this._events[ev] || [] : []);
+  },
+  emit: function(ev) {
+    this._events || (this._events = {});
+    var args = Array.prototype.slice.call(arguments, 1), i, e = this._events[ev] || [];
+    for(i = e.length-1; i >= 0 && e[i]; i--){
+      e[i].apply(this, args);
+    }
+    return this;
+  },
+  when: function(ev, cb) {
+    return this.once(ev, cb, true);
+  },
+  once: function(ev, cb, when) {
+    if(!cb) return this;
+    function c() {
+      if(!when) this.removeListener(ev, c);
+      if(cb.apply(this, arguments) && when) this.removeListener(ev, c);
+    }
+    c.cb = cb;
+    this.on(ev, c);
+    return this;
+  }
+};
+M.mixin = function(dest) {
+  var o = M.prototype, k;
+  for (k in o) {
+    o.hasOwnProperty(k) && (dest.prototype[k] = o[k]);
+  }
+};
+module.exports = M;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/common/filter.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/common/filter.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// default filter
+var Transform = __webpack_require__(/*! ./transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js");
+
+var levelMap = { debug: 1, info: 2, warn: 3, error: 4 };
+
+function Filter() {
+  this.enabled = true;
+  this.defaultResult = true;
+  this.clear();
+}
+
+Transform.mixin(Filter);
+
+// allow all matching, with level >= given level
+Filter.prototype.allow = function(name, level) {
+  this._white.push({ n: name, l: levelMap[level] });
+  return this;
+};
+
+// deny all matching, with level <= given level
+Filter.prototype.deny = function(name, level) {
+  this._black.push({ n: name, l: levelMap[level] });
+  return this;
+};
+
+Filter.prototype.clear = function() {
+  this._white = [];
+  this._black = [];
+  return this;
+};
+
+function test(rule, name) {
+  // use .test for RegExps
+  return (rule.n.test ? rule.n.test(name) : rule.n == name);
+};
+
+Filter.prototype.test = function(name, level) {
+  var i, len = Math.max(this._white.length, this._black.length);
+  for(i = 0; i < len; i++) {
+    if(this._white[i] && test(this._white[i], name) && levelMap[level] >= this._white[i].l) {
+      return true;
+    }
+    if(this._black[i] && test(this._black[i], name) && levelMap[level] <= this._black[i].l) {
+      return false;
+    }
+  }
+  return this.defaultResult;
+};
+
+Filter.prototype.write = function(name, level, args) {
+  if(!this.enabled || this.test(name, level)) {
+    return this.emit('item', name, level, args);
+  }
+};
+
+module.exports = Filter;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/common/minilog.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/common/minilog.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Transform = __webpack_require__(/*! ./transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js"),
+    Filter = __webpack_require__(/*! ./filter.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/filter.js");
+
+var log = new Transform(),
+    slice = Array.prototype.slice;
+
+exports = module.exports = function create(name) {
+  var o   = function() { log.write(name, undefined, slice.call(arguments)); return o; };
+  o.debug = function() { log.write(name, 'debug', slice.call(arguments)); return o; };
+  o.info  = function() { log.write(name, 'info',  slice.call(arguments)); return o; };
+  o.warn  = function() { log.write(name, 'warn',  slice.call(arguments)); return o; };
+  o.error = function() { log.write(name, 'error', slice.call(arguments)); return o; };
+  o.log   = o.debug; // for interface compliance with Node and browser consoles
+  o.suggest = exports.suggest;
+  o.format = log.format;
+  return o;
+};
+
+// filled in separately
+exports.defaultBackend = exports.defaultFormatter = null;
+
+exports.pipe = function(dest) {
+  return log.pipe(dest);
+};
+
+exports.end = exports.unpipe = exports.disable = function(from) {
+  return log.unpipe(from);
+};
+
+exports.Transform = Transform;
+exports.Filter = Filter;
+// this is the default filter that's applied when .enable() is called normally
+// you can bypass it completely and set up your own pipes
+exports.suggest = new Filter();
+
+exports.enable = function() {
+  if(exports.defaultFormatter) {
+    return log.pipe(exports.suggest) // filter
+              .pipe(exports.defaultFormatter) // formatter
+              .pipe(exports.defaultBackend); // backend
+  }
+  return log.pipe(exports.suggest) // filter
+            .pipe(exports.defaultBackend); // formatter
+};
+
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var microee = __webpack_require__(/*! microee */ "./node_modules/scratch-vm/node_modules/microee/index.js");
+
+// Implements a subset of Node's stream.Transform - in a cross-platform manner.
+function Transform() {}
+
+microee.mixin(Transform);
+
+// The write() signature is different from Node's
+// --> makes it much easier to work with objects in logs.
+// One of the lessons from v1 was that it's better to target
+// a good browser rather than the lowest common denominator
+// internally.
+// If you want to use external streams, pipe() to ./stringify.js first.
+Transform.prototype.write = function(name, level, args) {
+  this.emit('item', name, level, args);
+};
+
+Transform.prototype.end = function() {
+  this.emit('end');
+  this.removeAllListeners();
+};
+
+Transform.prototype.pipe = function(dest) {
+  var s = this;
+  // prevent double piping
+  s.emit('unpipe', dest);
+  // tell the dest that it's being piped to
+  dest.emit('pipe', s);
+
+  function onItem() {
+    dest.write.apply(dest, Array.prototype.slice.call(arguments));
+  }
+  function onEnd() { !dest._isStdio && dest.end(); }
+
+  s.on('item', onItem);
+  s.on('end', onEnd);
+
+  s.when('unpipe', function(from) {
+    var match = (from === dest) || typeof from == 'undefined';
+    if(match) {
+      s.removeListener('item', onItem);
+      s.removeListener('end', onEnd);
+      dest.emit('unpipe');
+    }
+    return match;
+  });
+
+  return dest;
+};
+
+Transform.prototype.unpipe = function(from) {
+  this.emit('unpipe', from);
+  return this;
+};
+
+Transform.prototype.format = function(dest) {
+  throw new Error([
+    'Warning: .format() is deprecated in Minilog v2! Use .pipe() instead. For example:',
+    'var Minilog = require(\'minilog\');',
+    'Minilog',
+    '  .pipe(Minilog.backends.console.formatClean)',
+    '  .pipe(Minilog.backends.console);'].join('\n'));
+};
+
+Transform.mixin = function(dest) {
+  var o = Transform.prototype, k;
+  for (k in o) {
+    o.hasOwnProperty(k) && (dest.prototype[k] = o[k]);
+  }
+};
+
+module.exports = Transform;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/array.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/array.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Transform = __webpack_require__(/*! ../common/transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js"),
+    cache = [ ];
+
+var logger = new Transform();
+
+logger.write = function(name, level, args) {
+  cache.push([ name, level, args ]);
+};
+
+// utility functions
+logger.get = function() { return cache; };
+logger.empty = function() { cache = []; };
+
+module.exports = logger;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/console.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/console.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Transform = __webpack_require__(/*! ../common/transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js");
+
+var newlines = /\n+$/,
+    logger = new Transform();
+
+logger.write = function(name, level, args) {
+  var i = args.length-1;
+  if (typeof console === 'undefined' || !console.log) {
+    return;
+  }
+  if(console.log.apply) {
+    return console.log.apply(console, [name, level].concat(args));
+  } else if(JSON && JSON.stringify) {
+    // console.log.apply is undefined in IE8 and IE9
+    // for IE8/9: make console.log at least a bit less awful
+    if(args[i] && typeof args[i] == 'string') {
+      args[i] = args[i].replace(newlines, '');
+    }
+    try {
+      for(i = 0; i < args.length; i++) {
+        args[i] = JSON.stringify(args[i]);
+      }
+    } catch(e) {}
+    console.log(args.join(' '));
+  }
+};
+
+logger.formatters = ['color', 'minilog'];
+logger.color = __webpack_require__(/*! ./formatters/color.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/color.js");
+logger.minilog = __webpack_require__(/*! ./formatters/minilog.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/minilog.js");
+
+module.exports = logger;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/color.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/color.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Transform = __webpack_require__(/*! ../../common/transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js"),
+    color = __webpack_require__(/*! ./util.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/util.js");
+
+var colors = { debug: ['cyan'], info: ['purple' ], warn: [ 'yellow', true ], error: [ 'red', true ] },
+    logger = new Transform();
+
+logger.write = function(name, level, args) {
+  var fn = console.log;
+  if(console[level] && console[level].apply) {
+    fn = console[level];
+    fn.apply(console, [ '%c'+name+' %c'+level, color('gray'), color.apply(color, colors[level])].concat(args));
+  }
+};
+
+// NOP, because piping the formatted logs can only cause trouble.
+logger.pipe = function() { };
+
+module.exports = logger;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/minilog.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/minilog.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Transform = __webpack_require__(/*! ../../common/transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js"),
+    color = __webpack_require__(/*! ./util.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/util.js"),
+    colors = { debug: ['gray'], info: ['purple' ], warn: [ 'yellow', true ], error: [ 'red', true ] },
+    logger = new Transform();
+
+logger.write = function(name, level, args) {
+  var fn = console.log;
+  if(level != 'debug' && console[level]) {
+    fn = console[level];
+  }
+
+  var subset = [], i = 0;
+  if(level != 'info') {
+    for(; i < args.length; i++) {
+      if(typeof args[i] != 'string') break;
+    }
+    fn.apply(console, [ '%c'+name +' '+ args.slice(0, i).join(' '), color.apply(color, colors[level]) ].concat(args.slice(i)));
+  } else {
+    fn.apply(console, [ '%c'+name, color.apply(color, colors[level]) ].concat(args));
+  }
+};
+
+// NOP, because piping the formatted logs can only cause trouble.
+logger.pipe = function() { };
+
+module.exports = logger;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/util.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/formatters/util.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var hex = {
+  black: '#000',
+  red: '#c23621',
+  green: '#25bc26',
+  yellow: '#bbbb00',
+  blue:  '#492ee1',
+  magenta: '#d338d3',
+  cyan: '#33bbc8',
+  gray: '#808080',
+  purple: '#708'
+};
+function color(fg, isInverse) {
+  if(isInverse) {
+    return 'color: #fff; background: '+hex[fg]+';';
+  } else {
+    return 'color: '+hex[fg]+';';
+  }
+}
+
+module.exports = color;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/index.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/index.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Minilog = __webpack_require__(/*! ../common/minilog.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/minilog.js");
+
+var oldEnable = Minilog.enable,
+    oldDisable = Minilog.disable,
+    isChrome = (typeof navigator != 'undefined' && /chrome/i.test(navigator.userAgent)),
+    console = __webpack_require__(/*! ./console.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/console.js");
+
+// Use a more capable logging backend if on Chrome
+Minilog.defaultBackend = (isChrome ? console.minilog : console);
+
+// apply enable inputs from localStorage and from the URL
+if(typeof window != 'undefined') {
+  try {
+    Minilog.enable(JSON.parse(window.localStorage['minilogSettings']));
+  } catch(e) {}
+  if(window.location && window.location.search) {
+    var match = RegExp('[?&]minilog=([^&]*)').exec(window.location.search);
+    match && Minilog.enable(decodeURIComponent(match[1]));
+  }
+}
+
+// Make enable also add to localStorage
+Minilog.enable = function() {
+  oldEnable.call(Minilog, true);
+  try { window.localStorage['minilogSettings'] = JSON.stringify(true); } catch(e) {}
+  return this;
+};
+
+Minilog.disable = function() {
+  oldDisable.call(Minilog);
+  try { delete window.localStorage.minilogSettings; } catch(e) {}
+  return this;
+};
+
+exports = module.exports = Minilog;
+
+exports.backends = {
+  array: __webpack_require__(/*! ./array.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/array.js"),
+  browser: Minilog.defaultBackend,
+  localStorage: __webpack_require__(/*! ./localstorage.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/localstorage.js"),
+  jQuery: __webpack_require__(/*! ./jquery_simple.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/jquery_simple.js")
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/jquery_simple.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/jquery_simple.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Transform = __webpack_require__(/*! ../common/transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js");
+
+var cid = new Date().valueOf().toString(36);
+
+function AjaxLogger(options) {
+  this.url = options.url || '';
+  this.cache = [];
+  this.timer = null;
+  this.interval = options.interval || 30*1000;
+  this.enabled = true;
+  this.jQuery = window.jQuery;
+  this.extras = {};
+}
+
+Transform.mixin(AjaxLogger);
+
+AjaxLogger.prototype.write = function(name, level, args) {
+  if(!this.timer) { this.init(); }
+  this.cache.push([name, level].concat(args));
+};
+
+AjaxLogger.prototype.init = function() {
+  if(!this.enabled || !this.jQuery) return;
+  var self = this;
+  this.timer = setTimeout(function() {
+    var i, logs = [], ajaxData, url = self.url;
+    if(self.cache.length == 0) return self.init();
+    // Test each log line and only log the ones that are valid (e.g. don't have circular references).
+    // Slight performance hit but benefit is we log all valid lines.
+    for(i = 0; i < self.cache.length; i++) {
+      try {
+        JSON.stringify(self.cache[i]);
+        logs.push(self.cache[i]);
+      } catch(e) { }
+    }
+    if(self.jQuery.isEmptyObject(self.extras)) {
+        ajaxData = JSON.stringify({ logs: logs });
+        url = self.url + '?client_id=' + cid;
+    } else {
+        ajaxData = JSON.stringify(self.jQuery.extend({logs: logs}, self.extras));
+    }
+
+    self.jQuery.ajax(url, {
+      type: 'POST',
+      cache: false,
+      processData: false,
+      data: ajaxData,
+      contentType: 'application/json',
+      timeout: 10000
+    }).success(function(data, status, jqxhr) {
+      if(data.interval) {
+        self.interval = Math.max(1000, data.interval);
+      }
+    }).error(function() {
+      self.interval = 30000;
+    }).always(function() {
+      self.init();
+    });
+    self.cache = [];
+  }, this.interval);
+};
+
+AjaxLogger.prototype.end = function() {};
+
+// wait until jQuery is defined. Useful if you don't control the load order.
+AjaxLogger.jQueryWait = function(onDone) {
+  if(typeof window !== 'undefined' && (window.jQuery || window.$)) {
+    return onDone(window.jQuery || window.$);
+  } else if (typeof window !== 'undefined') {
+    setTimeout(function() { AjaxLogger.jQueryWait(onDone); }, 200);
+  }
+};
+
+module.exports = AjaxLogger;
+
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/node_modules/minilog/lib/web/localstorage.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/scratch-vm/node_modules/minilog/lib/web/localstorage.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Transform = __webpack_require__(/*! ../common/transform.js */ "./node_modules/scratch-vm/node_modules/minilog/lib/common/transform.js"),
+    cache = false;
+
+var logger = new Transform();
+
+logger.write = function(name, level, args) {
+  if(typeof window == 'undefined' || typeof JSON == 'undefined' || !JSON.stringify || !JSON.parse) return;
+  try {
+    if(!cache) { cache = (window.localStorage.minilog ? JSON.parse(window.localStorage.minilog) : []); }
+    cache.push([ new Date().toString(), name, level, args ]);
+    window.localStorage.minilog = JSON.stringify(cache);
+  } catch(e) {}
+};
+
+module.exports = logger;
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/src/dispatch/shared-dispatch.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/scratch-vm/src/dispatch/shared-dispatch.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var log = __webpack_require__(/*! ../util/log */ "./node_modules/scratch-vm/src/util/log.js");
+
+/**
+ * @typedef {object} DispatchCallMessage - a message to the dispatch system representing a service method call
+ * @property {*} responseId - send a response message with this response ID. See {@link DispatchResponseMessage}
+ * @property {string} service - the name of the service to be called
+ * @property {string} method - the name of the method to be called
+ * @property {Array|undefined} args - the arguments to be passed to the method
+ */
+
+/**
+ * @typedef {object} DispatchResponseMessage - a message to the dispatch system representing the results of a call
+ * @property {*} responseId - a copy of the response ID from the call which generated this response
+ * @property {*|undefined} error - if this is truthy, then it contains results from a failed call (such as an exception)
+ * @property {*|undefined} result - if error is not truthy, then this contains the return value of the call (if any)
+ */
+
+/**
+ * @typedef {DispatchCallMessage|DispatchResponseMessage} DispatchMessage
+ * Any message to the dispatch system.
+ */
+
+/**
+ * The SharedDispatch class is responsible for dispatch features shared by
+ * {@link CentralDispatch} and {@link WorkerDispatch}.
+ */
+var SharedDispatch = /*#__PURE__*/function () {
+  function SharedDispatch() {
+    _classCallCheck(this, SharedDispatch);
+    /**
+     * List of callback registrations for promises waiting for a response from a call to a service on another
+     * worker. A callback registration is an array of [resolve,reject] Promise functions.
+     * Calls to local services don't enter this list.
+     * @type {Array.<Function[]>}
+     */
+    this.callbacks = [];
+
+    /**
+     * The next response ID to be used.
+     * @type {int}
+     */
+    this.nextResponseId = 0;
+  }
+
+  /**
+   * Call a particular method on a particular service, regardless of whether that service is provided locally or on
+   * a worker. If the service is provided by a worker, the `args` will be copied using the Structured Clone
+   * algorithm, except for any items which are also in the `transfer` list. Ownership of those items will be
+   * transferred to the worker, and they should not be used after this call.
+   * @example
+   *      dispatcher.call('vm', 'setData', 'cat', 42);
+   *      // this finds the worker for the 'vm' service, then on that worker calls:
+   *      vm.setData('cat', 42);
+   * @param {string} service - the name of the service.
+   * @param {string} method - the name of the method.
+   * @param {*} [args] - the arguments to be copied to the method, if any.
+   * @returns {Promise} - a promise for the return value of the service method.
+   */
+  return _createClass(SharedDispatch, [{
+    key: "call",
+    value: function call(service, method) {
+      for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+        args[_key - 2] = arguments[_key];
+      }
+      return this.transferCall.apply(this, [service, method, null].concat(args));
+    }
+
+    /**
+     * Call a particular method on a particular service, regardless of whether that service is provided locally or on
+     * a worker. If the service is provided by a worker, the `args` will be copied using the Structured Clone
+     * algorithm, except for any items which are also in the `transfer` list. Ownership of those items will be
+     * transferred to the worker, and they should not be used after this call.
+     * @example
+     *      dispatcher.transferCall('vm', 'setData', [myArrayBuffer], 'cat', myArrayBuffer);
+     *      // this finds the worker for the 'vm' service, transfers `myArrayBuffer` to it, then on that worker calls:
+     *      vm.setData('cat', myArrayBuffer);
+     * @param {string} service - the name of the service.
+     * @param {string} method - the name of the method.
+     * @param {Array} [transfer] - objects to be transferred instead of copied. Must be present in `args` to be useful.
+     * @param {*} [args] - the arguments to be copied to the method, if any.
+     * @returns {Promise} - a promise for the return value of the service method.
+     */
+  }, {
+    key: "transferCall",
+    value: function transferCall(service, method, transfer) {
+      try {
+        var _this$_getServiceProv = this._getServiceProvider(service),
+          provider = _this$_getServiceProv.provider,
+          isRemote = _this$_getServiceProv.isRemote;
+        if (provider) {
+          for (var _len2 = arguments.length, args = new Array(_len2 > 3 ? _len2 - 3 : 0), _key2 = 3; _key2 < _len2; _key2++) {
+            args[_key2 - 3] = arguments[_key2];
+          }
+          if (isRemote) {
+            return this._remoteTransferCall.apply(this, [provider, service, method, transfer].concat(args));
+          }
+          var result = provider[method].apply(provider, args);
+          return Promise.resolve(result);
+        }
+        return Promise.reject(new Error("Service not found: ".concat(service)));
+      } catch (e) {
+        return Promise.reject(e);
+      }
+    }
+
+    /**
+     * Check if a particular service lives on another worker.
+     * @param {string} service - the service to check.
+     * @returns {boolean} - true if the service is remote (calls must cross a Worker boundary), false otherwise.
+     * @private
+     */
+  }, {
+    key: "_isRemoteService",
+    value: function _isRemoteService(service) {
+      return this._getServiceProvider(service).isRemote;
+    }
+
+    /**
+     * Like {@link call}, but force the call to be posted through a particular communication channel.
+     * @param {object} provider - send the call through this object's `postMessage` function.
+     * @param {string} service - the name of the service.
+     * @param {string} method - the name of the method.
+     * @param {*} [args] - the arguments to be copied to the method, if any.
+     * @returns {Promise} - a promise for the return value of the service method.
+     */
+  }, {
+    key: "_remoteCall",
+    value: function _remoteCall(provider, service, method) {
+      for (var _len3 = arguments.length, args = new Array(_len3 > 3 ? _len3 - 3 : 0), _key3 = 3; _key3 < _len3; _key3++) {
+        args[_key3 - 3] = arguments[_key3];
+      }
+      return this._remoteTransferCall.apply(this, [provider, service, method, null].concat(args));
+    }
+
+    /**
+     * Like {@link transferCall}, but force the call to be posted through a particular communication channel.
+     * @param {object} provider - send the call through this object's `postMessage` function.
+     * @param {string} service - the name of the service.
+     * @param {string} method - the name of the method.
+     * @param {Array} [transfer] - objects to be transferred instead of copied. Must be present in `args` to be useful.
+     * @param {*} [args] - the arguments to be copied to the method, if any.
+     * @returns {Promise} - a promise for the return value of the service method.
+     */
+  }, {
+    key: "_remoteTransferCall",
+    value: function _remoteTransferCall(provider, service, method, transfer) {
+      var _this = this;
+      for (var _len4 = arguments.length, args = new Array(_len4 > 4 ? _len4 - 4 : 0), _key4 = 4; _key4 < _len4; _key4++) {
+        args[_key4 - 4] = arguments[_key4];
+      }
+      return new Promise(function (resolve, reject) {
+        var responseId = _this._storeCallbacks(resolve, reject);
+
+        /** @TODO: remove this hack! this is just here so we don't try to send `util` to a worker */
+        if (args.length > 0 && typeof args[args.length - 1].yield === 'function') {
+          args.pop();
+        }
+        if (transfer) {
+          provider.postMessage({
+            service: service,
+            method: method,
+            responseId: responseId,
+            args: args
+          }, transfer);
+        } else {
+          provider.postMessage({
+            service: service,
+            method: method,
+            responseId: responseId,
+            args: args
+          });
+        }
+      });
+    }
+
+    /**
+     * Store callback functions pending a response message.
+     * @param {Function} resolve - function to call if the service method returns.
+     * @param {Function} reject - function to call if the service method throws.
+     * @returns {*} - a unique response ID for this set of callbacks. See {@link _deliverResponse}.
+     * @protected
+     */
+  }, {
+    key: "_storeCallbacks",
+    value: function _storeCallbacks(resolve, reject) {
+      var responseId = this.nextResponseId++;
+      this.callbacks[responseId] = [resolve, reject];
+      return responseId;
+    }
+
+    /**
+     * Deliver call response from a worker. This should only be called as the result of a message from a worker.
+     * @param {int} responseId - the response ID of the callback set to call.
+     * @param {DispatchResponseMessage} message - the message containing the response value(s).
+     * @protected
+     */
+  }, {
+    key: "_deliverResponse",
+    value: function _deliverResponse(responseId, message) {
+      try {
+        var _this$callbacks$respo = _slicedToArray(this.callbacks[responseId], 2),
+          resolve = _this$callbacks$respo[0],
+          reject = _this$callbacks$respo[1];
+        delete this.callbacks[responseId];
+        if (message.error) {
+          reject(message.error);
+        } else {
+          resolve(message.result);
+        }
+      } catch (e) {
+        log.error("Dispatch callback failed: ".concat(JSON.stringify(e)));
+      }
+    }
+
+    /**
+     * Handle a message event received from a connected worker.
+     * @param {Worker} worker - the worker which sent the message, or the global object if running in a worker.
+     * @param {MessageEvent} event - the message event to be handled.
+     * @protected
+     */
+  }, {
+    key: "_onMessage",
+    value: function _onMessage(worker, event) {
+      /** @type {DispatchMessage} */
+      var message = event.data;
+      message.args = message.args || [];
+      var promise;
+      if (message.service) {
+        if (message.service === 'dispatch') {
+          promise = this._onDispatchMessage(worker, message);
+        } else {
+          promise = this.call.apply(this, [message.service, message.method].concat(_toConsumableArray(message.args)));
+        }
+      } else if (typeof message.responseId === 'undefined') {
+        log.error("Dispatch caught malformed message from a worker: ".concat(JSON.stringify(event)));
+      } else {
+        this._deliverResponse(message.responseId, message);
+      }
+      if (promise) {
+        if (typeof message.responseId === 'undefined') {
+          log.error("Dispatch message missing required response ID: ".concat(JSON.stringify(event)));
+        } else {
+          promise.then(function (result) {
+            return worker.postMessage({
+              responseId: message.responseId,
+              result: result
+            });
+          }, function (error) {
+            return worker.postMessage({
+              responseId: message.responseId,
+              error: error
+            });
+          });
+        }
+      }
+    }
+
+    /**
+     * Fetch the service provider object for a particular service name.
+     * @abstract
+     * @param {string} service - the name of the service to look up
+     * @returns {{provider:(object|Worker), isRemote:boolean}} - the means to contact the service, if found
+     * @protected
+     */
+  }, {
+    key: "_getServiceProvider",
+    value: function _getServiceProvider(service) {
+      throw new Error("Could not get provider for ".concat(service, ": _getServiceProvider not implemented"));
+    }
+
+    /**
+     * Handle a call message sent to the dispatch service itself
+     * @abstract
+     * @param {Worker} worker - the worker which sent the message.
+     * @param {DispatchCallMessage} message - the message to be handled.
+     * @returns {Promise|undefined} - a promise for the results of this operation, if appropriate
+     * @private
+     */
+  }, {
+    key: "_onDispatchMessage",
+    value: function _onDispatchMessage(worker, message) {
+      throw new Error("Unimplemented dispatch message handler cannot handle ".concat(message.method, " method"));
+    }
+  }]);
+}();
+module.exports = SharedDispatch;
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/src/dispatch/worker-dispatch.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/scratch-vm/src/dispatch/worker-dispatch.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _callSuper(t, o, e) { return o = _getPrototypeOf(o), _possibleConstructorReturn(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], _getPrototypeOf(t).constructor) : o.apply(t, e)); }
+function _possibleConstructorReturn(t, e) { if (e && ("object" == _typeof(e) || "function" == typeof e)) return e; if (void 0 !== e) throw new TypeError("Derived constructors may only return object or undefined"); return _assertThisInitialized(t); }
+function _assertThisInitialized(e) { if (void 0 === e) throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); return e; }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+function _getPrototypeOf(t) { return _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function (t) { return t.__proto__ || Object.getPrototypeOf(t); }, _getPrototypeOf(t); }
+function _inherits(t, e) { if ("function" != typeof e && null !== e) throw new TypeError("Super expression must either be null or a function"); t.prototype = Object.create(e && e.prototype, { constructor: { value: t, writable: !0, configurable: !0 } }), Object.defineProperty(t, "prototype", { writable: !1 }), e && _setPrototypeOf(t, e); }
+function _setPrototypeOf(t, e) { return _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function (t, e) { return t.__proto__ = e, t; }, _setPrototypeOf(t, e); }
+var SharedDispatch = __webpack_require__(/*! ./shared-dispatch */ "./node_modules/scratch-vm/src/dispatch/shared-dispatch.js");
+var log = __webpack_require__(/*! ../util/log */ "./node_modules/scratch-vm/src/util/log.js");
+
+/**
+ * This class provides a Worker with the means to participate in the message dispatch system managed by CentralDispatch.
+ * From any context in the messaging system, the dispatcher's "call" method can call any method on any "service"
+ * provided in any participating context. The dispatch system will forward function arguments and return values across
+ * worker boundaries as needed.
+ * @see {CentralDispatch}
+ */
+var WorkerDispatch = /*#__PURE__*/function (_SharedDispatch) {
+  function WorkerDispatch() {
+    var _this;
+    _classCallCheck(this, WorkerDispatch);
+    _this = _callSuper(this, WorkerDispatch);
+
+    /**
+     * This promise will be resolved when we have successfully connected to central dispatch.
+     * @type {Promise}
+     * @see {waitForConnection}
+     * @private
+     */
+    _this._connectionPromise = new Promise(function (resolve) {
+      _this._onConnect = resolve;
+    });
+
+    /**
+     * Map of service name to local service provider.
+     * If a service is not listed here, it is assumed to be provided by another context (another Worker or the main
+     * thread).
+     * @see {setService}
+     * @type {object}
+     */
+    _this.services = {};
+    _this._onMessage = _this._onMessage.bind(_this, self);
+    if (typeof self !== 'undefined') {
+      self.onmessage = _this._onMessage;
+    }
+    return _this;
+  }
+
+  /**
+   * @returns {Promise} a promise which will resolve upon connection to central dispatch. If you need to make a call
+   * immediately on "startup" you can attach a 'then' to this promise.
+   * @example
+   *      dispatch.waitForConnection.then(() => {
+   *          dispatch.call('myService', 'hello');
+   *      })
+   */
+  _inherits(WorkerDispatch, _SharedDispatch);
+  return _createClass(WorkerDispatch, [{
+    key: "waitForConnection",
+    get: function get() {
+      return this._connectionPromise;
+    }
+
+    /**
+     * Set a local object as the global provider of the specified service.
+     * WARNING: Any method on the provider can be called from any worker within the dispatch system.
+     * @param {string} service - a globally unique string identifying this service. Examples: 'vm', 'gui', 'extension9'.
+     * @param {object} provider - a local object which provides this service.
+     * @returns {Promise} - a promise which will resolve once the service is registered.
+     */
+  }, {
+    key: "setService",
+    value: function setService(service, provider) {
+      var _this2 = this;
+      if (this.services.hasOwnProperty(service)) {
+        log.warn("Worker dispatch replacing existing service provider for ".concat(service));
+      }
+      this.services[service] = provider;
+      return this.waitForConnection.then(function () {
+        return _this2._remoteCall(self, 'dispatch', 'setService', service);
+      });
+    }
+
+    /**
+     * Fetch the service provider object for a particular service name.
+     * @override
+     * @param {string} service - the name of the service to look up
+     * @returns {{provider:(object|Worker), isRemote:boolean}} - the means to contact the service, if found
+     * @protected
+     */
+  }, {
+    key: "_getServiceProvider",
+    value: function _getServiceProvider(service) {
+      // if we don't have a local service by this name, contact central dispatch by calling `postMessage` on self
+      var provider = this.services[service];
+      return {
+        provider: provider || self,
+        isRemote: !provider
+      };
+    }
+
+    /**
+     * Handle a call message sent to the dispatch service itself
+     * @override
+     * @param {Worker} worker - the worker which sent the message.
+     * @param {DispatchCallMessage} message - the message to be handled.
+     * @returns {Promise|undefined} - a promise for the results of this operation, if appropriate
+     * @protected
+     */
+  }, {
+    key: "_onDispatchMessage",
+    value: function _onDispatchMessage(worker, message) {
+      var promise;
+      switch (message.method) {
+        case 'handshake':
+          promise = this._onConnect();
+          break;
+        case 'terminate':
+          // Don't close until next tick, after sending confirmation back
+          setTimeout(function () {
+            return self.close();
+          }, 0);
+          promise = Promise.resolve();
+          break;
+        default:
+          log.error("Worker dispatch received message for unknown method: ".concat(message.method));
+      }
+      return promise;
+    }
+  }]);
+}(SharedDispatch);
+module.exports = new WorkerDispatch();
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/src/extension-support/argument-type.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/scratch-vm/src/extension-support/argument-type.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Block argument types
+ * @enum {string}
+ */
+var ArgumentType = {
+  /**
+   * Numeric value with angle picker
+   */
+  ANGLE: 'angle',
+  /**
+   * Boolean value with hexagonal placeholder
+   */
+  BOOLEAN: 'Boolean',
+  /**
+   * Numeric value with color picker
+   */
+  COLOR: 'color',
+  /**
+   * 20190725 moonlight color picker 카미봇 형태 추가 --
+   * Numeric value with color8 picker
+   */
+  COLOR8: 'color8',
+  /**
+   * Numeric value with text field
+   */
+  NUMBER: 'number',
+  /**
+   * String value with text field
+   */
+  STRING: 'string',
+  /**
+   * String value with matrix field
+   */
+  MATRIX: 'matrix',
+  // 20201022 moonlight 8x8 추가 --
+  MATRIX8: 'matrix8',
+  /**
+   * MIDI note number with note picker (piano) field
+   */
+  NOTE: 'note',
+  /**
+   * Inline image on block (as part of the label)
+   */
+  IMAGE: 'image'
+};
+module.exports = ArgumentType;
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/src/extension-support/block-type.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/scratch-vm/src/extension-support/block-type.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Types of block
+ * @enum {string}
+ */
+var BlockType = {
+  /**
+   * Boolean reporter with hexagonal shape
+   */
+  BOOLEAN: 'Boolean',
+  /**
+   * A button (not an actual block) for some special action, like making a variable
+   */
+  BUTTON: 'button',
+  /**
+   * Command block
+   */
+  COMMAND: 'command',
+  /**
+   * Specialized command block which may or may not run a child branch
+   * The thread continues with the next block whether or not a child branch ran.
+   */
+  CONDITIONAL: 'conditional',
+  /**
+   * Specialized hat block with no implementation function
+   * This stack only runs if the corresponding event is emitted by other code.
+   */
+  EVENT: 'event',
+  /**
+   * Hat block which conditionally starts a block stack
+   */
+  HAT: 'hat',
+  /**
+   * Specialized command block which may or may not run a child branch
+   * If a child branch runs, the thread evaluates the loop block again.
+   */
+  LOOP: 'loop',
+  /**
+   * General reporter with numeric or string value
+   */
+  REPORTER: 'reporter'
+};
+module.exports = BlockType;
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/src/extension-support/target-type.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/scratch-vm/src/extension-support/target-type.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Default types of Target supported by the VM
+ * @enum {string}
+ */
+var TargetType = {
+  /**
+   * Rendered target which can move, change costumes, etc.
+   */
+  SPRITE: 'sprite',
+  /**
+   * Rendered target which cannot move but can change backdrops
+   */
+  STAGE: 'stage'
+};
+module.exports = TargetType;
+
+/***/ }),
+
+/***/ "./node_modules/scratch-vm/src/util/log.js":
+/*!*************************************************!*\
+  !*** ./node_modules/scratch-vm/src/util/log.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var minilog = __webpack_require__(/*! minilog */ "./node_modules/scratch-vm/node_modules/minilog/lib/web/index.js");
+minilog.enable();
+module.exports = minilog('vm');
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=extension-worker.js.map
