@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--
+  포즈 분류(TM) 격리 실행 페이지.
+  @teachablemachine/pose@0.8.6 은 tfjs 1.x 전용이라 메인 페이지의 tfjs 4.22 엔진에서는
+  fromPixels 오류로 동작하지 않는다. 숨은 iframe 안에서 tfjs 1.3.1 과 함께 따로 실행해
+  메인 페이지의 전역 tf 에는 영향을 주지 않는다. (scratch-vm/src/util/tmpose-sandbox.js 가 사용)
+-->
+<script src="tfjs-1.3.1.min.js"></script>
+<script src="teachablemachine-pose-0.8.6.min.js"></script>
+</head>
+<body>
+<script>
+    // tfjs 1.3.1 은 다른 페이지(realm)의 캔버스를 입력으로 받지 못하므로 이 페이지의 캔버스로 복사한다.
+    var localCanvas = document.createElement('canvas');
+    function toLocalCanvas (src) {
+        if (localCanvas.width !== src.width) localCanvas.width = src.width;
+        if (localCanvas.height !== src.height) localCanvas.height = src.height;
+        localCanvas.getContext('2d').drawImage(src, 0, 0);
+        return localCanvas;
+    }
+
+    window.TMPoseSandbox = {
+        tfVersion: tf.version && tf.version.tfjs,
+        load: function (modelURL, metadataURL) {
+            return tmPose.load(modelURL, metadataURL).then(function (model) {
+                // 확장(scratch3_tmpose)이 쓰는 기능만 감싸서 돌려준다.
+                return {
+                    _metadata: model._metadata,
+                    getTotalClasses: function () { return model.getTotalClasses(); },
+                    estimatePose: function (canvas, flipHorizontal) {
+                        return model.estimatePose(toLocalCanvas(canvas), flipHorizontal);
+                    },
+                    predict: function (posenetOutput) { return model.predict(posenetOutput); }
+                };
+            });
+        }
+    };
+</script>
+</body>
+</html>
